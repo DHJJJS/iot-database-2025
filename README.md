@@ -98,6 +98,7 @@ IoT 개발자 데이터베이스 저장소
         +--------------------+
         4 rows in set (0.00 sec)
         
+![db001](https://github.com/user-attachments/assets/6fe89302-d09e-4d2f-9a94-854f0d93b9c2)
 <img sec='./image/db001.png' width='700'>
 
 - Workbench 설치
