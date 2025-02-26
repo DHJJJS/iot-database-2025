@@ -62,7 +62,7 @@ IoT 개발자 데이터베이스 저장소
         CONTAINER ID   IMAGE          COMMAND                   CREATED          STATUS          PORTS                               NAMES
         ee730f0df047   mysql:latest   "docker-entrypoint.s…"   17 seconds ago   Up 16 seconds   0.0.0.0:3306->3306/tcp, 33060/tcp   mysql-container
         ```
-        
+
     6. Docker 컨테이너 시작, 중지, 재시작
         ```shell
         > docker stop mysql-container            # 중지
