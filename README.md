@@ -96,7 +96,9 @@ ee730f0df047   mysql:latest   "docker-entrypoint.s…"   17 seconds ago   Up 16 
         | sys                |
         +--------------------+
         4 rows in set (0.00 sec)
-        ```
+        
+<img sec='./image/db001.png' width='700'>
+
 - Workbench 설치
     - https://dev.mysql.com/downloads/workbench/ MySQL Workbench 8.0.41 설치
     - MySQL Installer에서 Workbench
