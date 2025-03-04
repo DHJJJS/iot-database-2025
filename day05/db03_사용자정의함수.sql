@@ -1,5 +1,6 @@
 -- 사용자 정의함수. 내장함수 반대. 개발자가 직접만드는 함수
 -- 저장프로시저와 유사. RETURNS가 차이남
+-- 1행 1열, 스칼라값 리턴
 SELECT char_length('HELLO WORLD');
 
 DELIMITER //

@@ -4,18 +4,18 @@ CREATE PROCEDURE GetInterest(
 )
 BEGIN
 	-- 변수 선언
-    DECLARE myInteresst FLOAT DEFAULT 0.0;
+    DECLARE myInterest FLOAT DEFAULT 0.0;
     DECLARE price INTEGER;
     DECLARE endOfRow BOOLEAN DEFAULT FALSE;
-    DECLARE InterestCutsor CURSOR FOR
+    DECLARE InterestCursor CURSOR FOR
 			SELECT saleprice FROM Orders;
 	DECLARE CONTINUE handler
 			FOR NOT FOUND SET endOfRow=TRUE;
 	
     -- 커서 오픈
-    OPEN InterestCutsor;
+    OPEN InterestCursor;
     cursor_loop: LOOP
-		FETCH InterestCursorOrders INTO price; -- select salprice from Orders의 테이블 한 행씩 읽어서 값을 price에 집어넣는다.
+		FETCH InterestCursor INTO price; -- select salprice from Orders의 테이블 한 행씩 읽어서 값을 price에 집어넣는다.
         IF endOfRow THEN LEAVE cursor_loop; 		-- python break;
         END IF;
         IF price >= 30000 THEN -- 판매가 3만원 이상이면 10% 이윤을 챙기고, 그 이하면 5% 이윤을 챙기자.
