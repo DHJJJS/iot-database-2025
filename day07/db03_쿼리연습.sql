@@ -142,6 +142,9 @@ select e.employee_id
 						   from locations
 						  where city like 'o%');
    
+
+   -- 서브쿼리 테스트
  select location_id
    from locations
   where city like 'o%';
+
