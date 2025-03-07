@@ -42,10 +42,25 @@ select custid, count(*) as count_sale
  group by publisher;
 3️⃣ ORDER BY
 고객별 총 주문 금액을 구하고, 가장 많이 주문한 고객부터 정렬하시오.
+select custid, sum(price) as sumprices
+  from orders
+ order by custid max(price) as maxprices asc;
 주문한 도서의 가격을 기준으로 비싼 순서대로 정렬하시오.
+SELECT custid, MAX(saleprice) AS maxprice  
+FROM orders  
+GROUP BY custid  
+ORDER BY maxprice DESC;
+
 출판사별로 평균 도서 가격을 구하고, 평균 가격이 높은 순서대로 정렬하시오.
+select publisher, avg(bookprice) as avgbookprice
+  from book
+ group by publisher
+ order by avgbookprice ASC;
+
 4️⃣ JOIN
 고객의 이름과 주문한 도서의 이름을 출력하시오.
+select name.custid, bookname
+  from book;
 도서를 구매한 고객의 이름과 주소, 주문한 도서의 제목, 가격을 함께 출력하시오.
 가격이 15,000원 이상인 도서를 주문한 고객의 이름과 도서 제목을 출력하시오.
 도서를 구매하지 않은 고객도 포함하여, 고객의 이름과 구매한 도서의 제목을 출력하시오.
